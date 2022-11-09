@@ -1,0 +1,50 @@
+[
+    {
+        "name": "View of Elephant ",
+        "img": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "rating": "4.5",
+        "id": "01",
+        "price": "30",
+        "discription": "Elephants don't like humans on foot, Nichols says, so your best options are photographing from a car or elevated area. And never approach an elephant. Let them come closer to you. Then you can put away the telephoto lens and use a wide angle instead.Elephants operate by smell, not sight, Nichols says. And those sensory memories are strong. If a scent is associated with past danger, they will either charge or run away depending on the situation."
+    },
+    {
+        "name": "Photography of Grizzly Bear",
+        "img": "https://images.pexels.com/photos/1068554/pexels-photo-1068554.jpeg",
+        "id": "02",
+        "rating": "4.0",
+        "price": "40",
+        "discription": "Actually, I love to photograph Grizzly bears from a safe vantage point. Most of the Grizzly bears I have photographed have showed no sign of aggression. Still, the safest way to photograph bears near the road is from your car. I often see Grizzly bears in the Canadian Rockies feeding on dandelions next to the road in the early morning hours."
+    },
+    {
+        "name": "Cheetah Lying on Gray Concrete Floor",
+        "img": "https://images.pexels.com/photos/7018141/pexels-photo-7018141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "rating": "4.5",
+        "id": "03",
+        "price": "35",
+        "discription": "Cheetahs prefer open grassland plains over wooded areas. The savannahs of Kenyas Maasai Mara and Tanzanias Serengeti with their abundance of prey animals are classic habitats, and this is where my own experience of photographing them originates."
+    },
+    {
+        "name": "Close-up of Fox on Grass",
+        "img": "https://images.pexels.com/photos/247399/pexels-photo-247399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "rating": "5.0",
+        "id": "04",
+        "price": "45",
+        "discription": "The key to photographing foxes is patience, but different approaches may need to be taken between urban and rural individuals. Urban foxes are much more accepting of people, and are far easier to watch uncovered than their rural cousins. A hide or scrim net will always help you to catch a glimpse of a rural fox, but I find urban animals can be quite wary of this technique."
+    },
+    {
+        "name": "Squirrel on Grass",
+        "img": "https://images.pexels.com/photos/458976/pexels-photo-458976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "rating": "4.5",
+        "id": "05",
+        "price": "50",
+        "discription": "Like with all wildlife, it was then just a waiting game. I placed a few hazelnuts (the squirrels favorite food) at the edge of the pool and sat still hiding for hours.Soon enough, a squirrel appeared and began to investigate the new pool. She hopped up onto the ledge and began to sniff around. To my amazement she instantly went to drink from the pool  it just shows that given a water supply, they will take advantage of it."
+    },
+    {
+        "name": "Close-up of Rabbit on Field",
+        "img": "https://images.pexels.com/photos/247373/pexels-photo-247373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "rating": "4.0",
+        "id": "06",
+        "price": "33",
+        "discription": "Rabbits are one of the most observant species of the countryside. They have eyes on either side of their heads, giving them almost 360o vision, and very large ears which can revolve to pick up all-round sound.When under threat of danger, a rabbit will thump its foot on the ground to warn all its mates, and they will all be gone in the blink of an eye. In a nutshell, if a rabbit doesnt want to be photographed, then it wont be!"
+    }
+]
