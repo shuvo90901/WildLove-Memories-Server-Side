@@ -17,12 +17,25 @@ async function run() {
         const servicesCollection = client.db('photography').collection('services');
         const reviewCollection = client.db('photography').collection('reviews');
 
+
         app.get('/services', async (req, res) => {
             const query = {};
             const cursor = servicesCollection.find(query);
             const services = await cursor.toArray();
             res.send(services)
         });
+
+        app.get('/serviceslimit', async (req, res) => {
+            const query = {};
+            const cursor = servicesCollection.find(query);
+            const count = await servicesCollection.estimatedDocumentCount();
+            const services = await cursor.skip(count - 3).toArray();
+            res.send(services)
+        });
+
+        // app.get('/serviceslimit',async(req,res)=>{
+        //     const query={}
+        // })
 
         app.get('/service/:id', async (req, res) => {
             const id = req.params.id;
