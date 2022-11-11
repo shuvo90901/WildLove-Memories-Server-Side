@@ -14,6 +14,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@clu
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 function verifyJWT(req, res, next) {
+
     const authHeader = req.headers.authorization;
     if (!authHeader) {
         return res.status(401).send({ message: 'unauthorized access' });
@@ -35,7 +36,6 @@ async function run() {
 
         app.post('/jwt', (req, res) => {
             const user = req.body;
-            console.log(user)
             const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' })
             res.send({ token })
         })
@@ -66,7 +66,7 @@ async function run() {
             res.send(service)
         })
 
-        app.post('/services', async (req, res) => {
+        app.post('/services', verifyJWT, async (req, res) => {
             const service = req.body;
             const result = await servicesCollection.insertOne(service);
             res.send(result);
@@ -79,6 +79,7 @@ async function run() {
         })
 
         app.get('/reviews', verifyJWT, async (req, res) => {
+
 
             const decoded = req.decoded;
             console.log('inside orders api', decoded)
@@ -93,7 +94,7 @@ async function run() {
                     email: req.query.email
                 }
             }
-            const cursor = reviewCollection.find(query);
+            const cursor = reviewCollection.find(query).sort({ date: -1 })
             const reviews = await cursor.toArray();
             res.send(reviews)
         })
@@ -105,6 +106,17 @@ async function run() {
             res.send(result)
         })
 
+        app.put('/reviews/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: ObjectId(id) };
+            const discription = req.body;
+            const option = { upsert: true };
+            const updateDiscription = {
+                $set: discription
+            }
+            const result = await reviewCollection.updateOne(filter, updateDiscription, option);
+            res.send(result)
+        })
 
     }
     finally {
